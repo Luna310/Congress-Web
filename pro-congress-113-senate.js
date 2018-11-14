@@ -79,7 +79,7 @@ var data ={
                  "crp_id": null,
                  "google_entity_id": "/m/0g9g4r",
                  "fec_candidate_id": "",
-                 "url": "http://www.ayotte.senate.gov",
+                 "url": "http://www.ayotte.senate.gov/public",
                  "rss_url": "http://www.ayotte.senate.gov/rss/",
                  "contact_form": null,
                  "in_office": false,
