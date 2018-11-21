@@ -1,53 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
 
-    </head>
-    
-    <body>
-         <nav>
-          <div>
-            <div>
-              <a href="#">TGIF</a>
-            </div>
-            <ul >
-              <li><a href="#">Home</a></li>
-              <li >
-                <a href="#">Congress 113</a>
-                <ul >
-                  <li><a href="#">Senate</a></li>
-                  <li><a href="#">House</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>        
-  
+<head>
 
-        <header>            
-            <div>
-            	<p>https://www.whitehouse.gov/the_press_office/TransparencyandOpenGovernment</p>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            </div>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="estiloCongress.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="container-fluid">
+
+                <div class="row" "container">
+                    <div class="col-lg-1">
+                        <a href="home-starter-page.html"><img src="imgCongreso/logoAguilaSmall.jpg" class="img-circle" alt="government"></a>
+                    </div>
+                    <div class="col-lg-9" class="h1Header">
+                        <h1 style="text-align: center">113th Congress</h1>
+                    </div>
+                    <div class="col-lg-1" style="background-color:;">
+                        <a href="mailto:info@tgif.net">
+                            <h3>info@tgif.net</h3>
+                            <img src="imgCongreso/sobre.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="row" "container-fluid" style="background-color:black;">
+                    <div class="col-lg-1" "container-fluid">
+                        <button class="btn btn-primary dropdown-toggle" type="button"><a class="aHomme" href="home-starter-page.html">Homme</a>
+                        </button>
+                    </div>
+
+                    <div class="col-lg-11">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Congress 113
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="senate-starter-page.html">Senate</a></li>
+                            <li><a href="house-starter-page.html">House</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </header>
         <!--Table container-->
-        <div>
-            <h2>About Us</h2>
-            <p>Openness, accountability, and honesty define government transparency. In a free society, transparency is government's obligation to share information with citizens. It is at the heart of how citizens hold their public officials accountable. Here at TGIF we believe that government should be transparent.</p>  
-            <p>Governments exist to serve the people. Information on how officials conduct the public business and spend taxpayer money must be readily available and easily understood. This transparency allows good and just governance.  Transparency promotes accountability and provides information for citizens about what their Government is doing.</p>  
-            <p>We also believe that government should be participatory. Public engagement enhances the Government's effectiveness and improves the quality of its decisions. Knowledge is widely dispersed in society, and public officials benefit from having access to that dispersed knowledge. We invite you to use our site to become actively engaged in American government.</p>
-            <p>TGIF works to disclose information in forms that the public can readily find and use. We solicit public feedback to identify information of greatest use to the public.</p>
+        <div class="container-fluid">
+            <div class="col-lg-9">
+                <div>
+                    <h2>About Us</h2>
+                    <p>Openness, accounability, and honesty define government transparency. In a free society, transparency is government's obligation to share information with citizens. It is at the heart of how citizens hold their public officials accountable. Here at TGIF we believe that government should be transparent.</p>
+                    <p>Governments exist to serve the people. Information on how officials conduct the public business and spend taxpayer money must be readily available and easily understood. This transparency allows good and just governance. Transparency promotes accountability and provides information for citizens about what their Government is doing.</p>
+                    <p>We also believe that government should be participatory. Public engagement enhances the Government's effectiveness and improves the quality of its decisions. Knowledge is widely dispersed in society, and public officials benefit from having access to that dispersed knowledge. We invite you to use our site to become actively engaged in American government.</p>
+                    <p>TGIF works to disclose information in forms that the public can readily find and use. We solicit public feedback to identify information of greatest use to the public.</p>
+                </div>
 
-            <h3>Background History of Government Transparency</h3>
-            <p>In the West, the idea that government should be open to public scrutiny and susceptible to public opinion dates back at least to the time of the Enlightenment, when many philosophes made an attack on absolutist doctrine of state secrecy, a core part of their intellectual project. The passage of formal legislative instruments to this end can also be traced to this time with Sweden, for example, (which then included Finland as a Swedish-governed territory) enacting free press legislation as part of its constitution (Freedom of the Press Act, 1766). This approach, and that of the philosophes more broadly, is strongly related to recent historiography on the eighteenth-century public sphere.
+            </div>
+            <div clas="col-lg-1">
+                <img src="imgCongreso/logoAguila.jpg" class="img-circle" alt="government">
+            </div>
 
-      			<p>Influenced by Enlightenment thought, the revolutions in America (1776) and France (1789), freedom of the press enshrined provisions and requirements for public budgetary accounting and freedom of the press in constitutional articles. In the nineteenth century, attempts by Metternichean statesmen to row back on these measures were vigorously opposed by a number of eminent liberal politicians and writers, Bentham, Mill and Acton prominent among the latter.</p>
+        </div>
+    </div>
+    <div class="container">
+        <button data-toggle="collapse" data-target="#demo">Read More
+        </button>
+        <div id="demo" class="collapse">
 
-      			<p>Open government is widely seen to be a key hallmark of contemporary democratic practice and is often linked to the passing of freedom of information legislation. Scandinavian countries claim to have adopted the first freedom of information legislation, dating the origins of its modern provisions to the eighteenth century and Finland continuing the presumption of openness after gaining independence in 1917, passing its Act on Publicity of Official Documents in 1951 (superseded by new legislation in 1999).</p>
+            <div class="container-fluid">
+                <div class="col-lg-9">
+                    <h2>Background History of Government Transparency</h2>
+                    <p>In the West, the idea tht
+                        government should be open to public scrutiny and susceptible to public opinion dates back at least to the time of the Enlightenment, when many philosophes made an attack on absolutist doctrine of state secrecy, a core part of their intellectual project. The passage of formal legislative instruments to this end can also be traced to this time with Sweden, for example, (which then included Finland as a Swedish-governed territory) enacting free press legislation as part of its constitution (Freedom of the Press Act, 1766). This approach, and that of the philosophes more broadly, is strongly related to recent historiography on the eighteenth-century public sphere.
 
-      			<p>The United States passed its Freedom of Information Act (FOIA) in 1966, FOIAs, Access to Information Acts (AIAs) or equivalent laws were passed in Denmark and Norway in 1970.</p>
 
 
-    	</div>    
+                        <p>Influenced by Enlightenment thought, the revolutions in America (1776) and France (1789), freedom of the press enshrined provisions and requirements for public budgetary accounting and freedom of the press in constitutional articles. In the nineteenth century, attempts by Metternichean statesmen to row back on these measures were vigorously opposed by a number of eminent liberal politicians and writers, Bentham, Mill and Acton prominent among the latter.</p>
+
+                        <p>Open government is widely seen to be a key hallmark of contemporary democratic practice and is often linked to the passing of freedom of information legislation. Scandinavian countries claim to have adopted the first freedom of information legislation, dating the origins of its modern provisions to the eighteenth century and Finland continuing the presumption of openness after gaining independence in 1917, passing its Act on Publicity of Official Documents in 1951 (superseded by new legislation in 1999).</p>
+
+                        <p>The United States passed its Freedom of Information Act (FOIA) in 1966, FOIAs, Access to Information Acts (AIAs) or equivalent laws were passed in Denmark and Norway in 1970.</p>
+                </div>
+                <div class="col-lg-1">
+                    <img src="imgCongreso/bandera-de-eeuu-imagen-animada-0054.gif" class="img-circleBandera" alt="flag">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container" "h3Footer" style="background-color:black;">
+        <h3 style="text-align: center">&copy;2018 | All Rights Reserved</h3>
+    </footer>
 </body>
+
 </html>

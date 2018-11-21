@@ -1,0 +1,154 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.h1Header {
+    background-color: white;
+    text-shadow: 1px -2px 4px black;
+    text-align: center;
+}
+
+.h1,
+h1 {
+    font-family: -webkit-body;
+    font-size: 115px;
+    text-shadow: 7px -4px 7px black;
+}
+
+.h2,
+h2 {
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: -1px -3px black;
+}
+
+
+.img-circle {
+    border-radius: 50%;
+    margin-top: 52px;
+    box-shadow: 2px -7px 20px 0px black;
+    transition: opacity 1.5s ease-in-out;
+}
+
+img {
+    vertical-align: middle;
+    border-radius: 50%;
+    box-shadow: 2px -7px 20px 0px black;
+}
+
+
+.img-circleBandera {
+    border-radius: 50%;
+    margin-top: 200px;
+    margin-left: 30px;
+    box-shadow: 2px -7px 20px 0px black;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.img-circle:hover {
+    transform: url(imgCongreso/Trump.jpg) no-repeat;
+}
+
+footer {
+    color: white;
+    margin-bottom: 35px;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: ;
+    border: none;
+    background: border-box;
+    color: darkcyan;
+}
+
+p {
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border: white 5px solid;
+    border-radius: 19px;
+}
+
+.btn-link {
+    color: #fff;
+    background-color: #337ab7;
+    border: white 5px solid;
+    border-radius: 19px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 17px;
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+    border: 15px solid black;
+    border-radius: 34px;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/*
+table {
+    background-color: white;
+    margin: 36px;
+}
+*/
+
+/*
+td {
+    text-align: center;
+    border: 10px solid lightslategrey;
+    width: 208px;
+    height: 50px;
+}
+
+th {
+    text-align: center;
+    border: 10px solid lightslategrey;
+    width: 208px;
+    height: 50px;
+}
+*/
+
+
+/*
+.td,
+a {
+    color: blue;
+    text-decoration: none;
+}
+*/
+.aHomme {
+    color: white;
+    text-decoration: none;
+}
+/*
+.col-lg-12{
+    background-color: white;
+    margin-bottom: 50px;
+}
+*/
+.selected{
+    text-align: center;
+}
+select {
+    font-family: ;
+    border: 5px solid lightslategrey;
+    background: border-box;
+    color: darkcyan;
+}
