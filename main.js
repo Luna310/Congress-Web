@@ -35,6 +35,10 @@ function createDropdow() {
 }
 var arrayThead = ["Full Name", "Party", "State", "Seniority", "Percentage of votes with party"];
 
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 function addMultTable(rows, array) {
     var newTabla = document.createElement("table");
     newTabla.classList.add("table", "table-striped");
@@ -102,7 +106,7 @@ function addMultTable(rows, array) {
 
     console.log(newTabla);
 }
-addMultTable(arrayThead.length, members);
+
 
 function filterCongress() {
 

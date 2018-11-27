@@ -10,6 +10,7 @@ body {
 
 .h1,
 h1 {
+    color: darkcyan;
     font-family: -webkit-body;
     font-size: 115px;
     text-shadow: 7px -4px 7px black;
@@ -17,9 +18,10 @@ h1 {
 
 .h2,
 h2 {
-    font-size: 30px;
+    border-bottom: 3px solid darkcyan;
+    font-size: 24px;
     font-weight: 900;
-    text-shadow: -1px -3px black;
+    font-family: inherit;
 }
 
 
@@ -50,14 +52,21 @@ img {
 }
 
 footer {
+    background-color: darkcyan;
+    border-radius: 20px;
     color: white;
     margin-bottom: 35px;
+}
+
+button {
+    width: auto;
 }
 
 button,
 input,
 select,
 textarea {
+
     font-family: ;
     border: none;
     background: border-box;
@@ -65,15 +74,20 @@ textarea {
 }
 
 p {
-    margin: 0 0 10px;
-    font-weight: bold;
+    margin-top:10px;
+    font-weight: inherit;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #337ab7;
+    background-color: darkcyan;
     border: white 5px solid;
     border-radius: 19px;
+}
+
+.col-lg-2 {
+    padding: 11px;
+    width: auto;
 }
 
 .btn-link {
@@ -88,7 +102,7 @@ p {
     z-index: 1;
     display: none;
     padding: 5px 0;
-    margin: 2px 0 0;
+    margin: -10px 0 0;
     font-size: 17px;
     text-align: center;
     list-style: none;
@@ -137,18 +151,20 @@ a {
     color: white;
     text-decoration: none;
 }
-/*
-.col-lg-12{
-    background-color: white;
-    margin-bottom: 50px;
-}
-*/
-.selected{
+
+.selected {
     text-align: center;
 }
+
 select {
     font-family: ;
     border: 5px solid lightslategrey;
     background: border-box;
     color: darkcyan;
+}
+
+
+.divButton {
+    background-color: darkcyan;
+    border-radius: 20px
 }

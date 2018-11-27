@@ -23,7 +23,7 @@
         <header>
             <nav class="container-fluid">
 
-                <div class="row" "container">
+                <div class="row container">
                     <div class="col-lg-1">
                         <a href="home-starter-page.html"><img src="imgCongreso/logoAguilaSmall.jpg" class="img-circle" alt="government"></a>
                     </div>
@@ -70,38 +70,78 @@
                 </div>
             </nav>
         </header>
-        <div class="container" "row">
-            <div class="col-lg-8">
-                <div class="divChecbox">
-                    <h3>Filter by party:</h3>
-
-                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="R"> Republican
-                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="D"> Democrat
-                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="I"> Independent
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div id="divDropdown" "col-lg-6">
-                    <h3>Filter By State:</h3>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <h2>Senators</h2>
-            <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
-        </div>
         <!--Table container-->
-        <div id="divTable" class="col-lg-12">
+
+        <div class="container row">
+            <div class="col-lg-6">
+                <h2>Party Loyalty</h2>
+                <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+            </div>
+            <div class="col-lg-6">
+                <h2>House at a glance</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Party</th>
+                            <th>Number of Reps</th>
+                            <th>% Voted with Prty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="republican">
+                            <td>Republican</td>
+
+                        </tr>
+                        <tr id="democrat">
+                            <td>Democrat</td>
+
+                        </tr>
+                        <tr id="independent">
+                            <td>Independent</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+        <div class="container row">
+            <div class="col-lg-6">
+                <h2>Least Loyal (Bottom 10% of Party)</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableLoyal1">
 
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <h2>Most Loyal (Top 10% of Party)</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableLoyal3">
 
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <footer class="container">
         <h3 style="text-align: center">&copy;2018 | All Rights Reserved</h3>
     </footer>
-    <script src="pro-congress-113-senate.js"></script>
-    <script src="main.js"></script>
-
+    <script src="pro-congress-113-house.js"></script>
+    <script src="statistics.js"></script>
 </body>
 
 </html>

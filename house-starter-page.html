@@ -33,22 +33,38 @@
                     <div class="col-lg-1" style="background-color:;">
                         <a href="mailto:info@tgif.net">
                             <h3>info@tgif.net</h3>
-                            <img src="imgCongreso/sobre.png">
+                            <img src="imgCongreso/arroba2.jpg">
                         </a>
                     </div>
                 </div>
-                <div class="row" "container-fluid" style="background-color:black;">
-                    <div class="col-lg-1" "container-fluid">
+                <div class="divButton row">
+                    <div class="col-lg-2" "container-fluid">
                         <button class="btn btn-primary dropdown-toggle" type="button"><a class="aHomme" href="home-starter-page.html">Homme</a>
                         </button>
                     </div>
 
-                    <div class="col-lg-11">
+                    <div class="col-lg-2">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Congress 113
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <li><a href="senate-starter-page.html">Senate</a></li>
                             <li><a href="house-starter-page.html">House</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Attendance
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="SENATE-attendance-starter-page.html">Senate</a></li>
+                            <li><a href="HOUSE-attendance-starter-page.html">House</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Party Loyalty
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="SENATE-party-loyalty-starter-page.html">Senate</a></li>
+                            <li><a href="HOUSE-party-loyalty-starter-page.html">House</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,9 +75,9 @@
                 <div class="divChecbox">
                     <h3>Filter by party:</h3>
 
-                    <input type="checkbox" name="party" onclick="filterCongress()" value="R"> Republican
-                    <input type="checkbox" name="party" onclick="filterCongress()" value="D"> Democrat
-                    <input type="checkbox" name="party" onclick="filterCongress()" value="I"> Independent
+                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="R"> Republican
+                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="D"> Democrat
+                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="I"> Independent
                 </div>
             </div>
             <div class="col-lg-4">
@@ -70,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="container">
             <h2>Congressmen</h2>
             <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
             <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
@@ -81,7 +97,7 @@
         <div id="divTable" class="col-lg-12">
         </div>
     </div>
-    <footer class="container" "h3Footer" style="background-color:black;">
+    <footer class="container">
         <h3 style="text-align: center">&copy;2018 | All Rights Reserved</h3>
     </footer>
     <script src="pro-congress-113-house.js"></script>
