@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container"  id="house">
         <header>
             <nav class="container-fluid">
 
@@ -75,9 +75,9 @@
                 <div class="divChecbox">
                     <h3>Filter by party:</h3>
 
-                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="R"> Republican
-                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="D"> Democrat
-                    <input type="checkbox" name="party" onclick="filterCongress()" checked value="I"> Independent
+                    <input type="checkbox" name="party" onclick="filterCongress(members)" checked value="R"> Republican
+                    <input type="checkbox" name="party" onclick="filterCongress(members)" checked value="D"> Democrat
+                    <input type="checkbox" name="party" onclick="filterCongress(members)" checked value="I"> Independent
                 </div>
             </div>
             <div class="col-lg-4">
@@ -100,7 +100,7 @@
     <footer class="container">
         <h3 style="text-align: center">&copy;2018 | All Rights Reserved</h3>
     </footer>
-    <script src="pro-congress-113-house.js"></script>
+   
     <script src="main.js"></script>
 </body>
 

@@ -1,28 +1,78 @@
-var members = data.results[0].members;
+var data;
+var fetch;
+var senateFetch = "https://api.propublica.org/congress/v1/113/senate/members.json";
+var houseFetch = "https://api.propublica.org/congress/v1/113/house/members.json";
 
-
-function setState() {
-    state1 = ["all"];
-    for (i = 0; i < members.length; i++) {
-        if (state1.indexOf(members[i].state) === -1) {
-            state1.push(members[i].state);
-        }
-
+function selectPage() {
+    if (document.getElementById("house")) {
+        fetch = houseFetch;
+    } else {
+        fetch = senateFetch;
     }
+    return fetch;
 }
 
 
+fetch(selectPage(), {
+    method: "GET",
+    headers: {
+        'X-API-Key': 'huqblbvuIkdDWR6BHiMGYTSZpftKpjMTh0ub5JNg'
+    }
+}).then(function (response) {
+    if (response.ok) {
+        //			console.log(2);
+
+        return response.json();
+    }
+
+}).then(function (json) {
+    data = json;
+    //	console.timeEnd('ajaxTime');
+    members = data.results[0].members;
+
+    addMultTable(arrayThead.length, members);
+
+    createDropdow(members);
+
+    //    filterCongress(members);
+    //    console.log(members);
+
+}).catch(function (error) {
+    console.log("Request failed:" + error.message);
+});
 
 
-function createDropdow() {
+var members = [];
 
-    setState();
+//function setState(array) {
+//    state1 = ["all"];
+//    for (i = 0; i < array.length; i++) {
+//        if (state1.indexOf(array[i].state) === -1) {
+//            state1.push(array[i].state);
+//        }
+//
+//    }
+//}
+
+
+
+
+function createDropdow(array) {
+
+    state1 = ["all"];
+    for (i = 0; i < array.length; i++) {
+        if (state1.indexOf(array[i].state) === -1) {
+            state1.push(array[i].state);
+        }
+    }
+    console.log("state1");
+    console.log(state1);
     var newSelect = document.createElement("select");
     newSelect.setAttribute("id", "selectState");
     newSelect.setAttribute("name", "selectName")
     newSelect.onchange = function () {
-        filterCongress();
-    };
+        filterCongress(array);
+    }
     document.getElementById("divDropdown").appendChild(newSelect);
 
     for (i = 0; i < state1.length; i++) {
@@ -104,57 +154,62 @@ function addMultTable(rows, array) {
 
     }
 
-    console.log(newTabla);
+    //    console.log(newTabla);
 }
 
 
-function filterCongress() {
-
+function filterCongress(array) {
+    console.log(array);
     var dropTable = document.getElementById("divTable");
     dropTable.innerHTML = "";
-
+    //    console.log(dropTable);
     var stateFinal = [];
 
     var accesState = document.getElementById("selectState").value;
-    console.log(accesState)
+    //    console.log(accesState)
     if (accesState == "all") {
+        //        console.log(stateFinal)
+        stateFinal = array;
         console.log(stateFinal)
-        stateFinal = members;
-
+        console.log("statefinal1");
     } else {
-        for (j = 0; j < members.length; j++) {
-            if (accesState == members[j].state) {
-                stateFinal.push(members[j]);
+        for (j = 0; j < array.length; j++) {
+            if (accesState == array[j].state) {
+                stateFinal.push(array[j]);
             }
         }
     }
+    console.log("statefinal2");
+    console.log(stateFinal);
 
     var checkBox = document.querySelectorAll('input[name=party]:checked');
     var membersFilter = [];
     for (i = 0; i < checkBox.length; i++) {
-        for (j = 0; j < members.length; j++) {
-            if (checkBox[i].value == members[j].party) {
-                membersFilter.push(members[j]);
+        for (j = 0; j < stateFinal.length; j++) {
+            if (checkBox[i].value == stateFinal[j].party) {
+                membersFilter.push(stateFinal[j]);
             }
         }
     }
+
     var multiFilter = [];
-    console.log(stateFinal, "statefinal");
     for (i = 0; i < membersFilter.length; i++) {
-        for (j = 0; j < stateFinal.length; j++){
-            console.log( stateFinal[j])
+        for (j = 0; j < stateFinal.length; j++) {
+
             if (membersFilter[i] == stateFinal[j]) {
                 multiFilter.push(membersFilter[i])
 
             }
+        }
     }
-    }
-    console.log(multiFilter, "multifilter");
+    console.log(stateFinal)
+    console.log("miltifilter");
+    console.log(multiFilter);
 
-        addMultTable(arrayThead.length, multiFilter);
+    addMultTable(arrayThead.length, multiFilter);
 
 
 }
 
-addMultTable(arrayThead.length, members);
-createDropdow();
+//    addMultTable(arrayThead.length, members);
+//    createDropdow();
