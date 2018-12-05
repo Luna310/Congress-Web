@@ -3,148 +3,170 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--scrip para conectar con vue a través de CDN-->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-    <link rel="stylesheet" href="estiloCongress.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+
+	<link rel="stylesheet" href="estiloCongress.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <nav class="container-fluid">
+	<div id="app">
+		<div class="container">
+			<header>
+				<nav class="container-fluid">
 
-                <div class="row container">
-                    <div class="col-lg-1">
-                        <a href="home-starter-page.html"><img src="imgCongreso/logoAguilaSmall.jpg" class="img-circle" alt="government"></a>
-                    </div>
-                    <div class="col-lg-9" class="h1Header">
-                        <h1 style="text-align: center">113th Congress</h1>
-                    </div>
-                    <div class="col-lg-1" style="background-color:;">
-                        <a href="mailto:info@tgif.net">
-                            <h3>info@tgif.net</h3>
-                            <img src="imgCongreso/arroba2.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class= "divButton row">
-                    <div class="col-lg-2" "container-fluid">
-                        <button class="btn btn-primary dropdown-toggle" type="button"><a class="aHomme" href="home-starter-page.html">Homme</a>
-                        </button>
-                    </div>
+					<div class="row container">
+						<div class="col-lg-1">
+							<a href="home-starter-page.html"><img src="imgCongreso/logoAguilaSmall.jpg" class="img-circle" alt="government"></a>
+						</div>
+						<div class="col-lg-9" class="h1Header">
+							<h1 style="text-align: center">113th Congress</h1>
+						</div>
+						<div class="col-lg-1" style="background-color:;">
+							<a href="mailto:info@tgif.net">
+								<h3>info@tgif.net</h3>
+								<img src="imgCongreso/arroba2.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="divButton row">
+						<div class="col-lg-2 container-fluid">
+							<button class="btn btn-primary dropdown-toggle" type="button"><a class="aHomme" href="home-starter-page.html">Homme</a>
+							</button>
+						</div>
 
-                    <div class="col-lg-2">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Congress 113
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="senate-starter-page.html">Senate</a></li>
-                            <li><a href="house-starter-page.html">House</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Attendance
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="SENATE-attendance-starter-page.html">Senate</a></li>
-                            <li><a href="HOUSE-attendance-starter-page.html">House</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Party Loyalty
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="SENATE-party-loyalty-starter-page.html">Senate</a></li>
-                            <li><a href="HOUSE-party-loyalty-starter-page.html">House</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+						<div class="col-lg-2">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Congress 113
+								<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="senate-starter-page.html">Senate</a></li>
+								<li><a href="house-starter-page.html">House</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-2">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Attendance
+								<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="SENATE-attendance-starter-page.html">Senate</a></li>
+								<li><a href="HOUSE-attendance-starter-page.html">House</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-2">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Party Loyalty
+								<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="SENATE-party-loyalty-starter-page.html">Senate</a></li>
+								<li><a href="HOUSE-party-loyalty-starter-page.html">House</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
 
-        <!--Table container-->
-        
-            <div class="container row">
-                <div class="col-lg-6">
-                    <h2>Attendance</h2>
-                    <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+			<!--Table container-->
 
-                    <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
-                </div>
-                <div class="col-lg-6">
-                    <h2>Senate at a glance</h2>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Party</th>
-                                <th>Number of Reps</th>
-                                <th>% Voted with Prty</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr id="republican">
-                                <td>Republican</td>
+			<div class="container row">
+				<div class="col-lg-6">
+					<h2>Attendance</h2>
+					<p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
 
-                            </tr>
-                            <tr id="democrat">
-                                <td>Democrat</td>
+					<p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+				</div>
+				<div class="col-lg-6">
+					<h2>Senate at a glance</h2>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Party</th>
+								<th>Number of Reps</th>
+								<th> % Voted with Prty</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Republicans</td>
+								<td>{{num_republican}}</td>
+								<td>{{votes_pct_republicans}}</td>
+							</tr>
+							<tr>
+								<td>Democrats</td>
+								<td>{{num_democrats}}</td>
+								<td>{{votes_pct_democrats}}</td>
+							</tr>
+							<tr>
+								<td>Independients</td>
+								<td>{{num_independend}}</td>
+								<td>{{votes_pct_independence}}</td>
+							</tr>
+						</tbody>
+					</table>
 
-                            </tr>
-                            <tr id="independent">
-                                <td>Independent</td>
+				</div>
+			</div>
+			<div class="container row">
+				<div class="col-lg-6">
+					<h2>Least Engaged (Bottom 10% Attendance)</h2>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Number of Missed Votes</th>
+								<th>% Missed</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr v-for="member in Least_Engaged_Bottom_Attendance">
+								<td><a :href="member.url">{{member.first_name +" "+ member.last_name}}</a></td>
+								<td>{{member.missed_votes}}</td>
+								<td>{{member.missed_votes_pct}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-lg-6">
+					<h2>Most Engaged (Top 10% Attendance)</h2>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Number of Missed Votes</th>
+								<th>% Missed</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr v-for="member in Most_Engaged_Top_Attendance">
+								<td><a :href="member.url">{{member.first_name +" "+ member.last_name}}</a></td>
+								<td>{{member.missed_votes}}</td>
+								<td>{{member.missed_votes_pct}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div style="align-items: center" class="lds-ripple" v-if="members.length == 0 ">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="container row">
-                <div class="col-lg-6">
-                    <h2>Least Engaged (Bottom 10% Attendance)</h2>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Number of Missed Votes</th>
-                                <th>% Missed</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableAtt2">
-
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-lg-6">
-                    <h2>Most Engaged (Top 10% Attendance)</h2>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Number of Missed Votes</th>
-                                <th>% Missed</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tableAtt3">
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        
-    </div>
-    <footer class="container">
-        <h3 style="text-align: center">&copy;2018 | All Rights Reserved</h3>
-    </footer>
-    <script src="statistics.js"></script>
+		<footer class="container">
+			<h3 style="text-align: center">&copy;2018 | All Rights Reserved</h3>
+		</footer>
+		<script src="statistics2.js"></script>
+	</div>
 </body>
 
 </html>

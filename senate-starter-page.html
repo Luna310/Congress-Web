@@ -3,105 +3,136 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--scrip para conectar con vue a través de CDN-->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-    <link rel="stylesheet" href="estiloCongress.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+
+	<link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet" />
+
+	<script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+
+	<link rel="stylesheet" href="estiloCongress.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <nav class="container-fluid">
 
-                <div class="row" "container">
-                    <div class="col-lg-1">
-                        <a href="home-starter-page.html"><img src="imgCongreso/logoAguilaSmall.jpg" class="img-circle" alt="government"></a>
-                    </div>
-                    <div class="col-lg-9" class="h1Header">
-                        <h1 style="text-align: center">113th Congress</h1>
-                    </div>
-                    <div class="col-lg-1" style="background-color:;">
-                        <a href="mailto:info@tgif.net">
-                            <h3>info@tgif.net</h3>
-                            <img src="imgCongreso/arroba2.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="divButton row">
-                    <div class="col-lg-2" "container-fluid">
-                        <button class="btn btn-primary dropdown-toggle" type="button"><a class="aHomme" href="home-starter-page.html">Homme</a>
-                        </button>
-                    </div>
+	<div id="app">
+		<div class="container">
+			<header>
+				<nav class="container-fluid">
 
-                    <div class="col-lg-2">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Congress 113
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="senate-starter-page.html">Senate</a></li>
-                            <li><a href="house-starter-page.html">House</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Attendance
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="SENATE-attendance-starter-page.html">Senate</a></li>
-                            <li><a href="HOUSE-attendance-starter-page.html">House</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Party Loyalty
-                            <span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                            <li><a href="SENATE-party-loyalty-starter-page.html">Senate</a></li>
-                            <li><a href="HOUSE-party-loyalty-starter-page.html">House</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div class="container" "row">
-            <div class="col-lg-8">
-                <div class="divChecbox">
-                    <h3>Filter by party:</h3>
+					<div class="row">
+						<div class="col-lg-1">
+							<a href="home-starter-page.html"><img src="imgCongreso/logoAguilaSmall.jpg" class="img-circle" alt="government"></a>
+						</div>
+						<div class="col-lg-9" class="h1Header">
+							<h1 style="text-align: center">113th Congress</h1>
+						</div>
+						<div class="col-lg-1" style="background-color:;">
+							<a href="mailto:info@tgif.net">
+								<h3>info@tgif.net</h3>
+								<img src="imgCongreso/arroba2.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="divButton row">
+						<div class="col-lg-2">
+							<button class="btn btn-primary dropdown-toggle" type="button"><a class="aHomme" href="home-starter-page.html">Homme</a>
+							</button>
+						</div>
 
-                    <input type="checkbox" name="party" onclick="filterCongress(members)" checked value="R"> Republican
-                    <input type="checkbox" name="party" onclick="filterCongress(members)" checked value="D"> Democrat
-                    <input type="checkbox" name="party" onclick="filterCongress(members)" checked value="I"> Independent
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div id="divDropdown" "col-lg-6">
-                    <h3>Filter By State:</h3>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <h2>Senators</h2>
-            <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
-        </div>
-        <!--Table container-->
-        <div id="divTable" class="col-lg-12">
-        </div>
+						<div class="col-lg-2">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Congress 113
+								<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="senate-starter-page.html">Senate</a></li>
+								<li><a href="house-starter-page.html">House</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-2">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Attendance
+								<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="SENATE-attendance-starter-page.html">Senate</a></li>
+								<li><a href="HOUSE-attendance-starter-page.html">House</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-2">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Party Loyalty
+								<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="SENATE-party-loyalty-starter-page.html">Senate</a></li>
+								<li><a href="HOUSE-party-loyalty-starter-page.html">House</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div class="container">
+				<div class="col-lg-8">
+					<div class="divChecbox">
+						<h3>Filter by party:</h3>
+						<div id="changeForParty" @change="filterFinal">
+							<input type="checkbox" name="party" checked value="R"> Republican
+							<input type="checkbox" name="party" checked value="D"> Democrat
+							<input type="checkbox" name="party" checked value="I"> Independent
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<h3>Filter By State:</h3>
+					<select id="selectState" @change="filterFinal">
+						<option v-for="stat in stateArray">
+							{{stat}}
+						</option>
+					</select>
+				</div>
+			</div>
+			<div class="container">
+				<h2>Senators</h2>
+				<p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+			</div>
+			<!--Table container-->
+			<table class="table table-striped">
+				<tr>
+					<td>Name</td>
+					<td>Party</td>
+					<td>State</td>
+					<td>Seniority</td>
+					<td>Percentage</td>
+				</tr>
 
+				<tr v-for="member in members">
+					<td><a :href="member.url">{{member.first_name +" "+ member.last_name}}</a></td>
+					<td>{{member.party}}</td>
+					<td>{{member.state}}</td>
+					<td>{{member.seniority}}</td>
+					<td>{{member.votes_with_party_pct}}</td>
+				</tr>
+			</table>
+			<div style="align-items: center" class="lds-ripple" v-if="members.length == 0 ">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
 
-    </div>
-    <footer class="container">
-        <h3 style="text-align: center">&copy;2018 | All Rights Reserved</h3>
-    </footer>
-  
-    <script src="main.js"></script>
-
+		<footer class="container">
+			<h3 style="text-align: center">&copy;2018 | All Rights Reserved</h3>
+		</footer>
+		<script src="main.js"></script>
+	</div>
 </body>
 
 </html>

@@ -57,7 +57,10 @@ footer {
     color: white;
     margin-bottom: 35px;
 }
-
+.divButton {
+    background-color: darkcyan;
+    border-radius: 20px;
+}
 button {
     width: auto;
 }
@@ -164,72 +167,56 @@ select {
 }
 
 
-.divButton {
-    background-color: darkcyan;
-    border-radius: 20px;
+.lds-ripple {
+  display: flex;
+  position: static;
+  width: 100px;
+  height: 100px;
 }
-.tableAtt{
-    margin-top: 26px;
-}
-
-
-.loader {
-  font-size: 10px;
-  margin: 30% auto;
-  text-indent: -9999em;
-  width: 11em;
-  height: 11em;
+.lds-ripple div {
+  position: static;
+  border: 10px solid lightslategrey;
+  opacity: 1;
   border-radius: 50%;
-  background: #ffffff;
-  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  position: relative;
-  -webkit-animation: load3 1.4s infinite linear;
-  animation: load3 1.4s infinite linear;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
-.loader:before {
-  width: 50%;
-  height: 50%;
-  background: #FFF;
-  border-radius: 100% 0 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
 }
-.loader:after {
-  background: #0dcecb;
-  width: 75%;
-  height: 75%;
-  border-radius: 50%;
-  content: '';
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-@-webkit-keyframes load3 {
+@keyframes lds-ripple {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    top: 28px;
+    left: 28px;
+    width: 0;
+    height: 0;
+    opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    top: -1px;
+    left: -1px;
+    width: 58px;
+    height: 58px;
+    opacity: 0;
   }
 }
-@keyframes load3 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+$color-1: #DDD8B8;
+$color-2: #B3CBB9;
+$color-3: #84A9C0;
+$color-4: #6A66A3;
+$color-5: #58548E;
+
+$color: $color-1, $color-2, $color-3, $color-4, $color-5;
+
+@mixin anim($i){
+  $y: ($i + 5) * 10;
+ 
+  @keyframes right-#{$i} {
+    0% {
+      transform: translateY(#{-$y}px);
+    }
+    100% {
+      transform: translateY(#{$y}px);
+    }
   }
 }
+
