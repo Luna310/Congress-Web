@@ -67,7 +67,7 @@ var app = new Vue({
 				app.getVotes();
 				app.missedVotes();
 				app.votesWithParty();
-				console.log(app.members);
+				console.log(json);
 
 			}).catch(function (error) {
 				console.log("Request failed:" + error.message);
